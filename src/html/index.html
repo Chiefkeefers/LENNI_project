@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('blocks/head.html')
+
+<body class="body">
+  @@include('blocks/page-header.html')
+
+  <header class="homes">
+    <div class="homes__logo">
+      <h1 class="homes__container-title">
+        АРТ-ПРОСТРАНСТВО</h1>
+      <div class="homes__biglogo">
+        <picture class="homes__biglogo-picture">
+
+          <source media="(max-width: 500px)" srcset="assets/images/LENNI_min.jpg" />
+          <source media="(max-width: 768px)" srcset="assets/images/LENNI_tablet.jpg" />
+          <source media="(max-width: 1170px)" srcset="assets/images/LENNI_laptop.jpg" />
+
+          <img src="assets/images/lenni.jpg" class="biglogo" alt="biglogo" />
+        </picture>
+      </div>
+      <div class="homes__container-footer">
+        Для людей, горящих сердцем и делом место для настоящего
+      </div>
+    </div>
+  </header>
+
+  <div class="offers">
+    <div class="offers__container">
+      <h4 class="offers__title">Я ХОЧУ:</h4>
+      <div class="offers__btns">
+        <button class="offers__btn btn btn--red" type="button" id="js-eventOpenBtn">Провести мероприятие</button>
+        <button class="offers__btn btn" type="button">Стать арендатором</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="home">
+      <section class="about" id="about">
+
+        <h2 class="section-title">О НАС</h2>
+
+        <div class="about__block1">
+          <h3 class="about__title1">
+            Проект «Millennials»
+          </h3>
+          <p class="about__title2">
+            Вдохновлен молодыми идейными людьми, увлеченными
+            творчеством, эмоциями и желанием сделать мир лучше,
+            проявить себя. У них есть талант и стремление, у нас
+            возможность помочь им воплотить их мечту в реальность.
+          </p>
+        </div>
+
+        <div class="about__container">
+          <div class="about__block2">
+
+            <picture class="about__picture">
+              <source media="(max-width: 500px)" srcset="assets/images/pic-min.jpg" />
+              <!--<source media="(max-width: 768px)" srcset="assets/images/pic-tablet.jpg"/>-->
+              <source media="(max-width: 1020px)" srcset="assets/images/pic-tablet.jpg" />
+              <img src="assets/images/pic.jpg" class="about__img" alt="pic" />
+            </picture>
+
+            <h3 class="about__title">
+              Мы предоставляем площади для вашего мероприятия
+            </h3>
+
+            <p class="about__text">
+              И оказываем помощь с организацией, если вам это
+              нужно. Наша цель: вовлечь в культурную жизнь города
+              как можно больше людей, помочь молодым ребятам
+              сделать первые шаги к своей мечте и рассказать
+              всем о том, что их волнует.
+            </p>
+
+            <picture class="about__picture2">
+              <source media="(max-width: 650px)" srcset="assets/images/pic2min.jpg" />
+
+              <img src="assets/images/pic2.jpg" class="about__img" alt="pic2" />
+            </picture>
+
+
+          </div>
+
+          <div class="about__block3">
+            <div class="about__block3-container">
+              <div class="about__block3-rect">
+                <picture class="about__picture3">
+                  <source media="(max-width: 1340px)" srcset="assets/images/garden-big.jpg" />
+                  <img src="assets/images/garden.jpg" class="about__img" alt="garden" />
+                </picture>
+              </div>
+
+            </div>
+
+            <div class="about__block3-container2">
+              <div class="about__text3">
+                Мы уже успешно организовали и
+                провели более 100 проектов. Посмотрите, как это было классно.
+              </div>
+
+              <div class="about__block3-see">
+                <a href="#" class="about__link link">Смотреть</a>
+                <a href="#" class="about__block3-arrow arrow">
+                  <svg class="arrow__icon" width="91" height="60">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- prettier-ignore -->
+
+      @@include('blocks/upcoming.html', {"class": "home__upcoming"})
+
+      @@include('blocks/blog-listing.html', {"class": "home__listing"})
+
+      @@include('blocks/contacts.html')
+
+      <div class="bigtext">
+        <div class="bigtext__stroke">
+          <p class="bigtext__stroke-1">Просто делайте,</p>
+          <div class="bigtext__stroke-2">что нравится </div>
+        </div>
+        <p class="bigtext__stroke3">а мы вам поможем</p>
+      </div>
+
+    </div>
+  </main>
+  @@include('blocks/page-footer.html')
+  @@include('blocks/event-pp.html')
+
+
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/jquery.selectric.js"></script>
+  <script src="scripts/air-datepicker.js"></script>
+  <script src="scripts/jquery.mask.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+  <script src="scripts/jquery.validate.js"></script>
+  <script src="scripts/jquery.validate-init.js"></script>
+
+  <script src="scripts/swiper.min.js"></script>
+  <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

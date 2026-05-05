@@ -1,0 +1,30 @@
+.line {
+    display: flex;
+    width: 1314px;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 80px;
+    margin-bottom: 60px;
+
+    &__left {
+    width: 618px;
+    height: 2px;  
+    border-image-source: linear-gradient(to right, rgba(222, 222, 222, 0.5) 40%, black);
+    border-image-slice: 1;
+    background-image: linear-gradient(to right, rgba(222, 222, 222, 0.5) 40%, black); 
+    //margin-left: 40px;
+    padding: 0;    
+    }
+
+    &__right {
+    width: 618px;
+    height: 2px;  
+    border-image-source: linear-gradient(to left, rgba(222, 222, 222, 0.5) 40%, black);
+    border-image-slice: 1;
+    background-image: linear-gradient(to left, rgba(222, 222, 222, 0.5) 40%, black);   
+    //margin-right: 40px;
+    padding: 0;    
+    }
+
+}

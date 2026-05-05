@@ -1,0 +1,236 @@
+.reserve {
+  .container();
+  display: grid;
+  gap: 65px 11%;
+  //grid-template-columns: 405px calc(89% - 405px);
+  grid-template-columns: 405px 1fr;
+  grid-template-areas: 
+    "checks scheme"
+    "order legend"; 
+  width: 100%;
+  max-width: 1334px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media @bw1340 {
+    gap: 65px 6.5%;
+    //grid-template-columns: 340px calc(93.5% - 340px);
+    grid-template-columns: 340px 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media @bw1020 {
+    gap: 60px;
+    grid-template-columns: 1fr 390px;
+    grid-template-areas: 
+      "scheme scheme"
+      "checks legend"
+      "checks order"; 
+  }
+  @media @bw650 {
+    justify-content: left;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+      "scheme"
+      "legend"
+      "checks"
+      "order"; 
+  }
+
+
+&__checks {
+  grid-area: checks;
+  display: flex;
+  flex-direction: column;
+  //padding-left: 293px;
+  gap: 15px;
+   @media @bw650 {
+    //margin-left: 20px;
+    align-items: flex-start;
+     }
+   }
+
+&__order {
+  grid-area: order;
+ }
+
+&__scheme {
+  grid-area: scheme;
+  @media @bw1340 {
+    margin-left: 0;
+  }
+}
+
+&__legend {
+  grid-area: legend;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 355px;
+  max-height: 251px;
+  align-items: end;
+  @media @bw650 {
+  margin-left: 20px;
+   align-items: flex-start;
+  }
+  @media @bw400 {
+    margin-left: 0;
+  }
+ }
+ 
+&__scheme-wrapper {
+    position: relative;
+    width: 100%;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 51.15384%;
+    }
+  }
+
+  &__scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+ &__tickets {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__qty {
+    &::after {
+      content: " " attr(data-caption) " | " attr(data-price);
+    }
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__sum {
+    &::after {
+      content: attr(data-currency);
+      margin-left: 4px;
+      font-size: 0.95em;
+    }
+    font-weight: 600;
+  }
+
+  &__total {
+    &::before {
+      content: attr(data-caption);
+      @media @bw650 {
+      font-size: 18px;
+    }
+       }
+
+    &::after {
+      content: attr(data-currency);
+      margin-left: 4px;
+      font-size: 0.95em;
+    }
+      
+      align-items: center;
+      margin-top: 14px;
+      margin-bottom: 53px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+  &__section-title {
+   margin-bottom: 20px;
+   margin-top: 0;
+   font-size: 18px;
+   @media @bw768 {
+    font-size: 16px;
+   }
+     }
+
+     &__scheme-title {
+      width: 162px;
+      height: 34px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      background-color: @black;
+      color: @white;
+      font-size: 16px;
+      font-family: @font1;
+      font-weight: 600;
+      text-align: center;
+      line-height: 34px;
+    }
+
+    &__legend-red {
+      width: 24px;
+	    height: 24px;
+	    background: @red;
+      margin-right: 9px;
+      
+    }
+
+    &__legend-black {
+       width: 24px;
+	    height: 24px;
+	    background: @black;
+    }
+
+&__legend-blackcircle {
+    width: 24px;
+	height: 24px;
+  margin-left: -12px;
+	background: transparent;
+	border-radius: 12px;
+  border: 1px solid @black;
+}
+
+&__legend-redcircle {
+  width: 24px;
+	height: 24px;
+  margin-left: 0;
+	background: transparent;
+	border-radius: 12px;
+  border: 1px solid @red;
+
+}
+
+&__legend-graycircle {
+  width: 24px;
+	height: 24px;
+	border-radius: 12px;
+  background-color: rgba(191, 191, 191, 1);
+  }
+
+&__legend-label {
+    margin-left: 33px;
+    font-family: @font1;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: end;
+    }
+
+    &__legend-label1 {
+  margin-left: 51px;
+    font-family: @font1;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    //align-items: end;
+    }
+
+    &__legend-text {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 36px;
+      margin-bottom: 22px;
+    }
+}

@@ -1,0 +1,120 @@
+.bigtext {
+    //display: flex;
+    max-width: 2161px;
+    text-decoration: none;
+    font-family: @font3;
+    font-size: 128px;
+    font-weight: 700;
+    line-height: 308px;
+     //line-height: 120%;
+    margin: 0 auto;
+     @media @bw1340 {
+        max-width: 1519px;
+        font-size: 90px;
+        line-height: 120px;
+    }
+   @media @bw768 {
+    flex-direction: column;
+   }
+    @media @bw768 {
+        line-height: 120%;
+    }
+   
+   &__stroke {
+    display: flex;
+    flex-direction: row;
+    width: 2161px;
+    font-weight: 700;
+    @media @bw1340 {
+        width: 1519px;
+    }
+    @media @bw768 {
+        flex-direction: column;
+    }
+   }
+    &__stroke-1 {
+    display: inline-block;
+    margin-left: -52px;
+    margin-top: 150px;
+    margin-bottom: 0;
+    min-width: 1200px;
+    text-decoration: none;
+    text-align: left;
+    @media @bw1340 {
+        margin-left: -30px;
+        font-size: 90px;
+        margin-top: 130px;
+        min-width: 820px;
+    }
+    @media @bw768 {
+        margin-left: -26px;
+        margin-top: 100px;
+        max-width: 703px;
+        font-size: 80px;
+    }
+    @media @bw370 {
+        margin-left: -13px;
+        margin-top: 10px;
+        max-width: 352px;
+        font-size: 40px;
+        }
+    }
+
+    &__stroke-2 {
+    display: inline-block;
+    min-width: 1000px;
+    margin-top: 150px;
+    margin-bottom: 0;
+    @media @bw1340 {
+        min-width: 703px;
+        font-size: 90px;
+        margin-top: 130px;
+    }
+    @media @bw768 {
+       margin-left: 254px;
+        margin-top: 12px;
+        font-size: 80px;
+     }
+     @media @bw370 {
+        margin-left: 81px;
+        margin-top: 9px;
+        font-size: 40px;
+        line-height: 0;
+     }
+    }
+
+&__stroke3 {
+    display: block;
+    text-decoration: none;
+    margin-top: -56px;
+    font-family: @font3;
+    font-size: 128px;
+    font-weight: 700;
+    max-width: 1397px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 712px;
+    @media @bw1340 {
+        font-size: 90px;
+        line-height: 120px;
+        max-width: 983px;
+        padding-left: 510px;
+    }
+     @media @bw768 {
+        display: inline-block;
+        //display: flex;
+        //flex-direction: row;
+        width: 873px;
+        font-size: 80px;
+        margin-left: 0;
+        padding-left: 0;
+        text-align: left;
+            }
+    @media @bw370 {
+        width: 437px;
+        font-size: 40px;
+        text-align: center;
+        line-height: 0;
+    }
+    }
+}
